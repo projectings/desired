@@ -1,3 +1,3 @@
-# zurly#0001
-source code for https://zurly.lol <br>
+# desired#2700
+source code for https://proxy.vbin.cc <br>
 and some other pages.
