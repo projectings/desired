@@ -162,4 +162,3 @@ function writeLine(text, element, speed, callback) {
       app.audioElement.volume = volume;
     }, app.musicFadeIn / 100);
   }
-  

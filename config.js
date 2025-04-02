@@ -37,4 +37,4 @@ const links = [
 ];
 
 // Title change sequence
-const titles = ['g', 'go', 'gov', 'gov$'];
+const titles = ['g', 'go', 'gov', 'gov$']; 
