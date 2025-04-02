@@ -1,7 +1,5 @@
 # Website Project
 
-![Website Preview](https://r2.e-z.host/8c91e552-fa57-41ea-80e7-2c7fb070128c/2ialrr5x.gif)
-
 A sleek, minimalist personal website with interactive elements and aesthetic visuals. Features an animated intro sequence, sparkling cursor effects, bitcoin animations, and a clean terminal-inspired design.
 
 ## Features
