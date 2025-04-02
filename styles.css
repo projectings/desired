@@ -1,0 +1,176 @@
+/* Base styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #e4e3e3;
+    font-family: consolas, monospace;
+    overflow-x: hidden;
+    height: 100%;
+    cursor: default;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  a {
+    color: #e4e3e3;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Intro Section */
+  #main {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+  }
+  
+  #main.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .box {
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  /* Main Content */
+  .container {
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+  
+  .brand-header {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+  
+  /* Marquee */
+  .marquee-container {
+    position: absolute;
+    width: 100%;
+    bottom: 10%;
+    text-align: center;
+    visibility: hidden;
+  }
+  
+  .marquee-wrapper {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    visibility: hidden;
+  }
+  
+  #marquee {
+    width: 420px;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 15px;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .marquee-border {
+    font-weight: bold;
+    padding: 0 5px;
+    z-index: 2;
+    position: relative;
+    background-color: #000;
+  }
+  
+  .marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 0 5px;
+  }
+  
+  .marquee-content a {
+    display: inline-block;
+  }
+  
+  /* Bitcoin falling animation */
+  .snowflake {
+    position: fixed;
+    top: -10%;
+    z-index: -1;
+    user-select: none;
+    cursor: default;
+    animation-name: fall, sway;
+    animation-duration: 10s, 3s;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+    animation-play-state: running, running;
+  }
+  
+  @keyframes fall {
+    0% { top: -10%; }
+    100% { top: 100%; }
+  }
+  
+  @keyframes sway {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(80px); }
+  }
+  
+  /* Position bitcoin icons */
+  .snowflake:nth-child(1) { left: 10%; animation-delay: 1s, 1s; }
+  .snowflake:nth-child(2) { left: 20%; animation-delay: 6s, 0.5s; }
+  .snowflake:nth-child(3) { left: 30%; animation-delay: 4s, 2s; }
+  .snowflake:nth-child(4) { left: 50%; animation-delay: 8s, 3s; }
+  .snowflake:nth-child(5) { left: 70%; animation-delay: 2.5s, 1s; }
+  .snowflake:nth-child(6) { left: 80%; animation-delay: 1s, 0s; }
+  .snowflake:nth-child(7) { left: 90%; animation-delay: 3s, 1.5s; }
+  
+  /* Top right and footer */
+  .top-right {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    z-index: 100;
+    transition: opacity 0.3s ease;
+  }
+  
+  .top-right.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .footer {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+  }
+  
+  /* Background elements */
+  .background {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -3;
+  }
+  
+  #pattern {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABZJREFUeNpi2r9//38GBgYGJgYQAAQYABqUAv8FhqGhAAAAAElFTkSuQmCC') repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+  }
